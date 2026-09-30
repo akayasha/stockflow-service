@@ -1,0 +1,13 @@
+# Test profile overrides. The Testcontainers Initializer supplies the JDBC
+# URL at runtime; these values exist so Spring can boot.
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+stockflow:
+  app:
+    seed-demo-data: false
+  security:
+    jwt:
+      secret: test-secret-test-secret-test-secret-test-secret-1234567890
+      expiration-minutes: 60
